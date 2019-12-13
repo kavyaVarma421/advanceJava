@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>login and registration page</title>
+<link rel = "Stylesheet" href = "style.css">
+</head>
+<body>
+<div class = "Registration">
+<div class = "Signup">Registration form</div>
+</div>
+</body>
+</html>

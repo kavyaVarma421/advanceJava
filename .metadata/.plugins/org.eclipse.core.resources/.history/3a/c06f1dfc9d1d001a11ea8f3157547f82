@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>login and registration page</title>
+<link rel = "Stylesheet" href = "style.css">
+</head>
+<body>
+<div class = "for-login">
+<div class = "login">log in</div>
+<div class="login-form" align="center">
+<form>
+<input type = "text" placeholder="UserId" class = "input">
+<input type = "text" placeholder="Password" class = "input">
+<div class="button">
+<button type =  "submit" id = "hh">login</button>
+Don't have account?<a href = "#">&nbsp;Sign Up</a>
+</form>
+</div>
+</div>
+
+</div>
+</body>
+</html>

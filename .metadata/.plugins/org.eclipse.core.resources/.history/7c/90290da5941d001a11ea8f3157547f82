@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>login and registration page</title>
+<link rel = "Stylesheet" href = "style.css">
+</head>
+<body>
+<div class = "Registration">
+<div class = "Signup">Registration form</div>
+<div class="signup-form" align="center">
+
+<input type = "text" placeholder="FirstName" class = "input">
+<input type = "text" placeholder="LastName" class = "input">
+<input type = "text" placeholder="UserId" class = "input">
+<input type = "text" placeholder="EmailId" class = "input">
+<input type = "text" placeholder="MobileNumber" class = "input">
+<input type = "text" placeholder="Password" class = "input">
+</div>
+<button type =  "submit" id = "hh">create account</button>
+
+
+</div>
+</body>
+</html>

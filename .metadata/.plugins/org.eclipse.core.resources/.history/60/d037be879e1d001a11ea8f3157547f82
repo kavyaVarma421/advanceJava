@@ -1,0 +1,12 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	color: black;
+}
+
+.body {
+	background: black;
+	font-family: 'Roboto', sans-serif;
+}
