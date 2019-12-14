@@ -1,19 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-* {
-	margin: 0;
-	padding: 0;
-	user-select: none;
-	color: black;
-}
-body {
-	background: black;
-	font-family: 'Roboto', sans-serif;
-}
-.for-login{
+
+.for-login {
 	width: 250px;
 	margin: 70px auto;
 }
-.login{
+
+.login {
 	width: 200%;
 	background: #34b3a0;
 	height: 60px;
@@ -23,27 +14,34 @@ body {
 	cursor: pointer;
 	text-transform: uppercase;
 }
-.login-form{
+
+.login-form {
 	width: 200%;
 	background: white;
 	box-sizing: border-box;
-	padding: 50px;
+	padding: 40px;
 	float: right;
-	height: 400px;
+	height: auto;
 	padding-right: 0px;
 	padding-left: 83px;
 	padding-top: 40px;
 }
+
 .input {
 	padding: 20px;
 	float: left;
 	width: 80%;
 	margin-bottom: 30px;
 	margin-top: none;
-	font-size: 14px; outline : none;
+	font-size: 14px;
+	outline: none;
 	transition: all 0.5s ease;
 	outline: none;
 }
+.input:focus {
+	border: 2px solid #34b3a0;
+}
+
 #hh {
 	width: 100%;
 	height: auto;
@@ -57,6 +55,6 @@ body {
 
 .button {
 	padding-right: 83px;
-    padding-left: 0px;
-    padding-top: 40px;
+	padding-left: 0px;
+	padding-top: 40px;
 }

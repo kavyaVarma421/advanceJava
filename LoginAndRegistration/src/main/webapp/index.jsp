@@ -1,24 +1,28 @@
 <html>
 <head>
 <title>login and registration page</title>
-<link rel = "Stylesheet" href = "style.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<style type="text/css">	
+body {
+	background-color:black;
+	font-family: 'Roboto', sans-serif;
+}
+</style>
 </head>
 <body>
-<div class = "Registration">
-<div class = "Signup">Registration form</div>
-<div class="signup-form" align="center">
-
-<input type = "text" placeholder="FirstName" class = "input">
-<input type = "text" placeholder="LastName" class = "input">
-<input type = "text" placeholder="UserId" class = "input">
-<input type = "text" placeholder="EmailId" class = "input">
-<input type = "text" placeholder="MobileNumber" class = "input">
-<input type = "text" placeholder="Password" class = "input">
-<div class="button">
-<button type =  "submit" id = "hh">create account</button>
-</div>
-</div>
-
-</div>
+	<form>
+		<div class="for-login">
+			<div class="login">log in</div>
+			<div class="login-form" align="center">
+				<input type="text" name="username" placeholder="UserName" class="input">
+                <input type="password" name= "passwrd" placeholder="Password" class="input">            
+				<div class="button">
+					<button type="submit" id="hh">login</button>
+				</div>
+				Don't have account?<a href="signup.jsp">&nbsp;Sign Up</a>
+			</div>
+		</div>
+	</form>
 </body>
 </html>
+
