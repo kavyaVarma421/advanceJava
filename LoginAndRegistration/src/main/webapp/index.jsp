@@ -10,6 +10,9 @@ body {
 </style>
 </head>
 <body>
+<script src = "login.js" type="text/javascript">
+</script>
+
 	<form>
 		<div class="for-login">
 			<div class="login">log in</div>

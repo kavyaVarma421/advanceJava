@@ -4,17 +4,26 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form>
+	<script src="login.js" type="text/javascript">
+		
+	</script>
+	<form action = "RegistrationServlet" method="post">
 		<div class="Registration">
 			<div class="Signup">Registration form</div>
 			<div class="signup-form" align="center">
-				<input type="text" id="fname" placeholder="FirstName" class="input"> 
-				 <input id="lname" placeholder="LastName" class="input"> 
-				 <input id="uname" placeholder="UserName" class="input"> 
-				 <input type="password" id="passw" placeholder="Password" class="input">
-				 <input type="password" id = "cnfrmPasswrd" placeholder ="confirm Password" class="input">
-				 <input id="email" placeholder="EmailId" class="input"> 
-				 <input id="phnNo" placeholder="MobileNumber" class="input"> 
+				<input type="text" id="fname" placeholder="FirstName" class="input" required>
+				<input id="lname" placeholder="LastName" class="input" required>
+				<div>
+					<input id="uname" placeholder="UserName" class="input" required>
+					<p id="user" style=""></p>
+				</div>
+				<p id="valid"></p>
+				<input type="password" id="passw" placeholder="Password"
+					class="input" onclick="validatePassword();" required> <input
+					type="password" id="cnfrmPasswrd" placeholder="confirm Password"
+					class="input" required> <input id="email" placeholder="EmailId"
+					class="input" required> <input id="phnNo" placeholder="MobileNumber"
+					class="input" required>
 				<div class="button">
 					<button type="submit" id="hh">create account</button>
 				</div>
