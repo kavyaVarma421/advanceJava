@@ -8,7 +8,7 @@ private String uName;
 private String password;
 private String cnformPass;
 private String emailId;
-private long phnNum;
+private String phnNum;
 
 public String getfName() {
 	return fName;
@@ -46,10 +46,10 @@ public String getEmailId() {
 public void setEmailId(String emailId) {
 	this.emailId = emailId;
 }
-public long getPhnNum() {
+public String getPhnNum() {
 	return phnNum;
 }
-public void setPhnNum(long phnNum) {
+public void setPhnNum(String phnNum) {
 	this.phnNum = phnNum;
 }
 @Override
@@ -57,5 +57,6 @@ public String toString() {
 	return "PersonDetails [fName=" + fName + ", lName=" + lName + ", uName=" + uName + ", password=" + password
 			+ ", cnformPass=" + cnformPass + ", emailId=" + emailId + ", phnNum=" + phnNum + "]";
 }
+
 
 }
