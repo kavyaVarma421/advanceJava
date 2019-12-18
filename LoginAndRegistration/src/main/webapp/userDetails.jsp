@@ -3,6 +3,8 @@
     <%@page import="java.sql.*" %>
     
 <%
+String name = (String) request.getAttribute("User");
+String name1 = (String)session.getAttribute("name");
 Connection con = null;
 Statement st = null;
 ResultSet rs = null;
@@ -33,7 +35,8 @@ try{
 try{	
 	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc ? user=kavya & password=kavya123");
 	st = con.createStatement();
-	String query ="select Id,FirstName,LastName,UserName,EmailId,MobileNumber from LoginAndRegistration";
+	out.print(name);
+	String query ="select Id,FirstName,LastName,UserName,EmailId,MobileNumber from LoginAndRegistration where  UserName  = '"+name1+"'";
 	rs = st.executeQuery(query);
 	while(rs.next()){
 %>

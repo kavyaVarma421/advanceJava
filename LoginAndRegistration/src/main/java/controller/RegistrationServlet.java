@@ -15,6 +15,7 @@ import service.RegisterConnect;
 /**
  * Servlet implementation class RegistrationServlet
  */
+@SuppressWarnings("serial")
 @WebServlet("/RegistrationServlet")
 public class RegistrationServlet extends HttpServlet {
    
@@ -34,14 +35,14 @@ public class RegistrationServlet extends HttpServlet {
 	        
 	        System.out.println(details);
 	        
-	     RegisterConnect.registeringDetails(details);
-	        if(details!=null) {
-	        	RequestDispatcher rd = request.getRequestDispatcher("signup.jsp");
-	        	 rd.include(request, response);
+	  
+	        if( RegisterConnect.registeringDetails(details)){
+	        	request.setAttribute("display", "block");
+	        }else {
+	        	request.setAttribute("display", "none");
 	        }
-	            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-	            rd.forward(request, response);
-	        
+	        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            rd.forward(request, response);
 	    }		
 	}
 

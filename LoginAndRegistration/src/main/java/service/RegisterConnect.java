@@ -10,7 +10,7 @@ public class RegisterConnect {
 	static PreparedStatement st = null;
 	static String qry = "insert into jdbc.LoginAndRegistration(FirstName, LastName,UserName,password,EmailId,MobileNumber) values (?, ?, ?, ?, ?, ?)";
 
-public  static String registeringDetails(PersonDetails detail) {
+public  static boolean registeringDetails(PersonDetails detail) {
 	   
 		String fname =detail.getfName();
 		String lname =detail.getlName();
@@ -37,6 +37,7 @@ public  static String registeringDetails(PersonDetails detail) {
              
          	st.executeUpdate();
 			System.out.println("data inserted..");
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -58,6 +59,6 @@ public  static String registeringDetails(PersonDetails detail) {
 			}
 
 		}
-		return "something";
+		return false;
 	}
 }
