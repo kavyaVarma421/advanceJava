@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 //import java.io.PrintWriter;
@@ -21,23 +22,21 @@ import service.LoginConnection;
 public final class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      response.setContentType("text/javascript");
-    // PrintWriter pw = response.getWriter();
+    PrintWriter pw = response.getWriter();
      String username = request.getParameter("username");
      LoginDetails ld = new LoginDetails();
     ld.setuName(username);
-    System.out.println("df"+username);
     ld.setPassword(request.getParameter("passwrd"));
     try {
     	boolean result = LoginConnection.checkingDetails(ld);
     	if(result) {
-    		///HttpSession session = request.getSession();
-    		System.out.println(username+"ghcfhgf");
-    		request.setAttribute("User",username );
+    	request.setAttribute("User",username );
     	HttpSession session = request.getSession();
     	session.setAttribute("name",username);
     	RequestDispatcher rs = request.getRequestDispatcher("userDetails.jsp");
     	rs.forward(request, response);
     		} else {
+       
     		response.sendRedirect("index.jsp");
     		}
     }catch(Exception e) {

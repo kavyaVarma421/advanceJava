@@ -10,7 +10,9 @@ body {
 </style>
 </head>
 <body>
-<% String s=(String) (request.getAttribute("display")!=null?request.getAttribute("display"):"none") ;
+<% String s=(String)(request.getAttribute("display")!=null?request.getAttribute("display"):"none") ;
+%>
+<% String str=(String)(request.getAttribute("editing")!=null?request.getAttribute("editing"):"none") ;
 %>
 <script src = "login.js" type="text/javascript">
 
@@ -21,6 +23,7 @@ body {
 			<div class="login">log in</div>
 			<div class="login-form" align="center">
 			<div class="show" style="display: <%=s%>;">Successfully registered..now you can login here!</div>
+			<%-- <div class="displ" style="editing: <%=str%>;">successfully updated..login to show deatails</div> --%>
 				<input type="text" name="username" placeholder="UserName" class="input">
                 <input type="password" name= "passwrd" placeholder="Password" class="input">            
 				<div class="button">

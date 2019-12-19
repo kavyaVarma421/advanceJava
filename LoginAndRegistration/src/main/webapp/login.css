@@ -65,7 +65,20 @@
     padding-bottom: 21px;
     color: blue;
 }
-
+.displ{
+    display: block;
+    padding-block-start: 0px;
+    padding-right: 62px;
+    padding-bottom: 21px;
+    color: blue;
+}
+.logout{
+	ont: italic bold 12px/30px Georgia, serif;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 84px;
+}
+}
 
 
 

@@ -25,7 +25,6 @@ public class LoginConnection {
 		String query = "Select UserName,password from LoginAndRegistration where UserName=? and password=?";
 		PreparedStatement pstmt = null;
 		try {
-			System.out.println(uname+"vch");
 			pstmt = dbConnect().prepareStatement(query);
 			pstmt.setString(1, uname);
 			pstmt.setString(2, pwd);

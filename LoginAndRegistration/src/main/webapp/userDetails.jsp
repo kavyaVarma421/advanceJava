@@ -8,6 +8,7 @@ String name1 = (String)session.getAttribute("name");
 Connection con = null;
 Statement st = null;
 ResultSet rs = null;
+int temp=0;
 try{
 	Class.forName("com.mysql.jdbc.Driver");
 }catch(Exception e){
@@ -19,37 +20,30 @@ try{
 <html>
 <head>
 <title>user details</title>
+<link rel="stylesheet" type="text/css" href="userDetails.css">
 </head>
 <body>
 <form action="">
 <table border="1">
-<tr>
-<td>Id</td>
-<td>firstName</td>
-<td>lastName</td>
-<td>UserName</td>
-<td>EmailId</td>
-<td>MobileNo</td>
-</tr>
 <%
 try{	
 	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc ? user=kavya & password=kavya123");
 	st = con.createStatement();
-	out.print(name);
+	out.print("hello.."+name);
 	String query ="select Id,FirstName,LastName,UserName,EmailId,MobileNumber from LoginAndRegistration where  UserName  = '"+name1+"'";
 	rs = st.executeQuery(query);
 	while(rs.next()){
+		temp=rs.getInt("Id");
 %>
-<tr>
-<td><%=rs.getInt("Id") %></td>
-<td><%=rs.getString("FirstName")%></td>
-<td><%=rs.getString("LastName")%></td>
-<td><%=rs.getString("UserName")%></td>
-<td><%=rs.getString("EmailId")%></td>
-<td><%=rs.getString("MobileNumber")%></td>
+<tr><th>Id<td><%=temp %></td></tr>
+<tr><th>firstName<td><%=rs.getString("FirstName")%></td></tr>
+<tr><th>lastName<td><%=rs.getString("LastName")%></td></tr>
+<tr><th>UserName<td><%=rs.getString("UserName")%></td></tr>
+<tr><th>EmailId<td><%=rs.getString("EmailId")%></td></tr>
+<tr><th>MobileNo<td><%=rs.getString("MobileNumber")%></td>
 </tr>
 <%
-	}
+}
 con.close();
 st.close();
 }catch(Exception e){
@@ -57,7 +51,12 @@ st.close();
 }
 %>
 </table>
-<button type="submit" id="hh">logout</button>
+<a class="button" id = "logout" href="LogoutServlet">logout</a>
+<a class="button" id = "update" href=<%="edit?id="+temp %>>update</a>
+<a class="button" id = "delete" >delete</a>
 </form>
 </body>
 </html>
+
+
+

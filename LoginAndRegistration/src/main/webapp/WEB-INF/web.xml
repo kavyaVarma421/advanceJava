@@ -9,6 +9,36 @@
 		<description>controller</description>
 		<servlet-class>controller.LoginServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>RetrieveServlet</servlet-name>
+		<display-name>RetrieveServlet</display-name>
+		<description></description>
+		<servlet-class>controller.RetrieveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RetrieveServlet</servlet-name>
+		<url-pattern>/RetrieveServlet</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<display-name>UpdateServlet</display-name>
+		<description></description>
+		<servlet-class>controller.UpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/UpdateServlet</url-pattern>
+	</servlet-mapping> -->
+	<!-- <servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<display-name>LogoutServlet</display-name>
+		<description></description>
+		<servlet-class>controller.LogoutServlet</servlet-class>
+	</servlet> -->
+<!-- 	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping> -->
 	
  <!--  <display-name>Archetype Created Web Application</display-name>
   <servlet>

@@ -1,0 +1,33 @@
+#update{
+	text-decoration:none;
+	text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+.input {
+	  margin: 8px 0;
+  box-sizing: border-box;
+}
+.button {
+	padding-right: 83px;
+	padding-left: 0px;
+	padding-top: 40px;
+}
+
