@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.LoginDetails;
+import model.PersonDetails;
 import service.LoginConnection;
 /**
  * Servlet implementation class LoginServlet
@@ -27,22 +28,17 @@ public final class LoginServlet extends HttpServlet {
      LoginDetails ld = new LoginDetails();
     ld.setuName(username);
     ld.setPassword(request.getParameter("passwrd"));
-    try {
-    	boolean result = LoginConnection.checkingDetails(ld);
-    	if(result) {
-    	request.setAttribute("User",username );
-    	HttpSession session = request.getSession();
+
+    	PersonDetails result = LoginConnection.checkingDetails(ld);
+    	if(result!=null) {
+    	HttpSession session = request.getSession(true);
     	session.setAttribute("name",username);
+    	request.setAttribute("detail", result);
     	RequestDispatcher rs = request.getRequestDispatcher("userDetails.jsp");
     	rs.forward(request, response);
-    		} else {
-       
-    		response.sendRedirect("index.jsp");
+    		} 
+          
     		}
-    }catch(Exception e) {
-    	e.printStackTrace();
-    }
      
 	}
 
-}

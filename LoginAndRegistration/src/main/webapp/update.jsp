@@ -1,26 +1,43 @@
+<%@page import="model.PersonDetails"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="java.sql.*" %>
+<% 
+try{
+PersonDetails pd=(PersonDetails)request.getAttribute("detail");
+%>
 <html>
 <body>
 <h1>Update your details</h1>
+
 <form method="post" action="UpdateServlet">
-Id:<br>
-<input type="hidden" name="id">
+<div>
+
+First name:
+<input type="text" name="firstName" value=<%=pd.getfName()%>>
 <br>
-First name:<br>
-<input type="text" name="firstName">
+Last name:
+<input type="text" name="lastName" value=<%=pd.getlName()%>>
 <br>
-Last name:<br>
-<input type="text" name="lastName">
+User Name:
+<input type="text" name="UserName" readonly="readonly" value=<%=pd.getuName()%>>
 <br>
-User Name:<br>
-<input type="hidden" name="UserName">
+Email Id:
+<input type="email" name="email" value=<%=pd.getEmailId()%>>
 <br>
-Email Id:<br>
-<input type="email" name="email">
-<br>
-Mobile Number:<br>
-<input type="text" name="MobileNo">
+Mobile Number:
+<input type="text" name="MobileNo" value=<%=pd.getPhnNum()%>>
 <br><br>
+
+</div>
+
 <button type="submit" id="button">update</button>
+
+<%}catch(Exception e){
+out.print(e);
+}
+	%>
+
 </form>
 </body>
 </html>

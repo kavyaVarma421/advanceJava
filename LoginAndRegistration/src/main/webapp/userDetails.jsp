@@ -3,7 +3,7 @@
     <%@page import="java.sql.*" %>
     
 <%
-String name = (String) request.getAttribute("User");
+
 String name1 = (String)session.getAttribute("name");
 Connection con = null;
 Statement st = null;
@@ -23,19 +23,18 @@ try{
 <link rel="stylesheet" type="text/css" href="userDetails.css">
 </head>
 <body>
-<form action="">
 <table border="1">
 <%
 try{	
 	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc ? user=kavya & password=kavya123");
 	st = con.createStatement();
-	out.print("hello.."+name);
+	out.print("hello.."+name1);
 	String query ="select Id,FirstName,LastName,UserName,EmailId,MobileNumber from LoginAndRegistration where  UserName  = '"+name1+"'";
 	rs = st.executeQuery(query);
 	while(rs.next()){
 		temp=rs.getInt("Id");
 %>
-<tr><th>Id<td><%=temp %></td></tr>
+<tr><th>Id<td><%=rs.getInt("Id")%></td></tr>
 <tr><th>firstName<td><%=rs.getString("FirstName")%></td></tr>
 <tr><th>lastName<td><%=rs.getString("LastName")%></td></tr>
 <tr><th>UserName<td><%=rs.getString("UserName")%></td></tr>
@@ -51,10 +50,11 @@ st.close();
 }
 %>
 </table>
+<a class="button" id = "upd" href=<%="Update?id="+temp %>>update</a>
+
+<a class="button" id = "delete" href="DeleteServlet">delete</a>
 <a class="button" id = "logout" href="LogoutServlet">logout</a>
-<a class="button" id = "update" href=<%="edit?id="+temp %>>update</a>
-<a class="button" id = "delete" >delete</a>
-</form>
+
 </body>
 </html>
 

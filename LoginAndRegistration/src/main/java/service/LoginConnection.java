@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.LoginDetails;
+import model.PersonDetails;
 
 public class LoginConnection {
 	public static Connection dbConnect() throws ClassNotFoundException, SQLException {
@@ -19,10 +20,11 @@ public class LoginConnection {
 		return con;
 	}
 
-	public static boolean checkingDetails(LoginDetails ld) {
+	public static PersonDetails checkingDetails(LoginDetails ld) {
+		PersonDetails pd=new PersonDetails();
 		String uname = ld.getuName();
 		String pwd = ld.getPassword();
-		String query = "Select UserName,password from LoginAndRegistration where UserName=? and password=?";
+		String query = "Select * from LoginAndRegistration where UserName=? and password=?";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = dbConnect().prepareStatement(query);
@@ -30,12 +32,18 @@ public class LoginConnection {
 			pstmt.setString(2, pwd);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				return true;
+				pd.setfName(rs.getString("FirstName"));
+				pd.setlName(rs.getString("LastName"));
+				pd.setuName(rs.getString("UserName"));
+				pd.setEmailId(rs.getString("EmailId"));
+				pd.setPhnNum(rs.getString("MobileNumber"));
+				return pd;
 			}
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
-		return false;
+		return pd;
 	}
+	
 }
