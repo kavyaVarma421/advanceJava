@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>login and registration page</title>
-<link rel="stylesheet" type="text/css" href="login.css">
+<link rel="stylesheet" type="text/css" href="CSS/login.css">
 <style type="text/css">	
 body {
 	background-color:black;

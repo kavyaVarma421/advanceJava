@@ -28,6 +28,7 @@ public class DeleteServlet extends HttpServlet {
 	static PreparedStatement st = null;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		HttpSession session = request.getSession(false);
 		String name = (String)session.getAttribute("name");
 
@@ -57,7 +58,9 @@ public class DeleteServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		DeleteDetails.delete(pd);
-	    RequestDispatcher rs = request.getRequestDispatcher("userDetail.jsp");
+		PrintWriter pw = response.getWriter();
+		pw.print("successfully deleted...");
+	    RequestDispatcher rs = request.getRequestDispatcher("userDetails.jsp");
 		rs.forward(request, response);
 		
 	}

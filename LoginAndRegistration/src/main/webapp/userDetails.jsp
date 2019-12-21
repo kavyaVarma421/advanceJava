@@ -20,26 +20,33 @@ try{
 <html>
 <head>
 <title>user details</title>
-<link rel="stylesheet" type="text/css" href="userDetails.css">
+<link rel="stylesheet" type="text/css" href="CSS/userDetails.css">
+<style type="text/css">
+</style>
 </head>
-<body>
-<table border="1">
+
+<body class="body">
+<h1>
+<%out.print("welcome   "+name1+"  check your details below");%>
+</h1>
+<div class="fort">
+<table>
 <%
 try{	
 	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc ? user=kavya & password=kavya123");
 	st = con.createStatement();
-	out.print("hello.."+name1);
+	
 	String query ="select Id,FirstName,LastName,UserName,EmailId,MobileNumber from LoginAndRegistration where  UserName  = '"+name1+"'";
 	rs = st.executeQuery(query);
 	while(rs.next()){
 		temp=rs.getInt("Id");
 %>
-<tr><th>Id<td><%=rs.getInt("Id")%></td></tr>
-<tr><th>firstName<td><%=rs.getString("FirstName")%></td></tr>
-<tr><th>lastName<td><%=rs.getString("LastName")%></td></tr>
-<tr><th>UserName<td><%=rs.getString("UserName")%></td></tr>
-<tr><th>EmailId<td><%=rs.getString("EmailId")%></td></tr>
-<tr><th>MobileNo<td><%=rs.getString("MobileNumber")%></td>
+<tr><th>Id       <td><%=rs.getInt("Id")%></td></tr>
+<tr><th>firstName  <td><%=rs.getString("FirstName")%></td></tr>
+<tr><th>lastName   <td><%=rs.getString("LastName")%></td></tr>
+<tr><th>UserName   <td><%=rs.getString("UserName")%></td></tr>
+<tr><th>EmailId    <td><%=rs.getString("EmailId")%></td></tr>
+<tr><th>MobileNo   <td><%=rs.getString("MobileNumber")%></td>
 </tr>
 <%
 }
@@ -50,13 +57,21 @@ st.close();
 }
 %>
 </table>
-<a class="button" id = "upd" href=<%="Update?id="+temp %>>update</a>
+</div>
+<div class="clicking">
 
-<a class="button" id = "delete" href="DeleteServlet">delete</a>
+<a class="button" id = "update" href=<%="Update?id="+temp %>>update</a>&ensp;&ensp;
+
+
+<a class="button" id = "delete" href="DeleteServlet">delete</a>&ensp;&ensp;
+
+
 <a class="button" id = "logout" href="LogoutServlet">logout</a>
 
+</div>
 </body>
-</html>
 
+</html>
+ 
 
 

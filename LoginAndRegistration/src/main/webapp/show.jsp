@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>logut page</title>
-<link rel="stylesheet" type="text/css" href="login.css">
+<link rel="stylesheet" type="text/css" href="CSS/login.css">
 </head>
 <body>
 <form action="UpdateServlet" method="post">

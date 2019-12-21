@@ -1,17 +1,19 @@
-
- body {
-	background: black;
-	font-family: 'Roboto', sans-serif;
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-left: 193px;
 }
-
 .Registration {
 	width: 250px;
 	margin: 70px auto;
 }
 
-.Signup {
+ .Signup {
 	width: 200%;
-	background: #34b3a0;
+	background-color:#34b3a0;
+	color:white;
+	font-weight:bold;
 	height: 60px;
 	float: right;
 	line-height: 60px;
@@ -19,8 +21,8 @@
 	cursor: pointer;
 	text-transform: uppercase;
 }
-
-.signup-form {
+ 
+ .signup-form {
 	width: 200%;
 	background: white;
 	box-sizing: border-box;
@@ -52,6 +54,8 @@
 	width: 100%;
 	height: auto;
 	background: #34b3a0;
+	color:white;
+	font-weight:bold;
 	text-align: center;
 	line-height: 60px;
 	text-transform: uppercase;
@@ -63,4 +67,4 @@
 	padding-right: 83px;
 	padding-left: 0px;
 	padding-top: 40px;
-}
+} 

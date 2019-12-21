@@ -1,4 +1,9 @@
-
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-left: 193px;
+}
 .for-login {
 	width: 250px;
 	margin: 70px auto;
@@ -7,6 +12,8 @@
 .login {
 	width: 200%;
 	background: #34b3a0;
+	color:white;
+	font-weight:bold;
 	height: 60px;
 	float: right;
 	line-height: 60px;
@@ -43,6 +50,8 @@
 }
 
 #hh {
+	color:white;
+	font-weight:bold;
 	width: 100%;
 	height: auto;
 	background: #34b3a0;
@@ -72,12 +81,7 @@
     padding-bottom: 21px;
     color: blue;
 }
-.logout{
-	ont: italic bold 12px/30px Georgia, serif;
-    text-align: center;
-    font-size: xx-large;
-    padding-top: 84px;
-}
+
 .delete{
     ont: italic bold 12px/30px Georgia, serif;
     text-align: center;

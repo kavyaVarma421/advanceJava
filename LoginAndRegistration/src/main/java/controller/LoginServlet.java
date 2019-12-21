@@ -22,7 +22,8 @@ import service.LoginConnection;
 @WebServlet("/LoginServlet")
 public final class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     response.setContentType("text/javascript");
+      PrintWriter out = response.getWriter();
+		response.setContentType("text/javascript");
     PrintWriter pw = response.getWriter();
      String username = request.getParameter("username");
      LoginDetails ld = new LoginDetails();
@@ -37,6 +38,9 @@ public final class LoginServlet extends HttpServlet {
     	RequestDispatcher rs = request.getRequestDispatcher("userDetails.jsp");
     	rs.forward(request, response);
     		} 
+    	else {
+            out.print("inavlid username & password...");
+    	}
           
     		}
      

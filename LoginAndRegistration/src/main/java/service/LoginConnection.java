@@ -24,7 +24,7 @@ public class LoginConnection {
 		PersonDetails pd=new PersonDetails();
 		String uname = ld.getuName();
 		String pwd = ld.getPassword();
-		String query = "Select * from LoginAndRegistration where UserName=? and password=?";
+		String query = "Select * from LoginAndRegistration where UserName=? and Password=?";
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = dbConnect().prepareStatement(query);
@@ -43,7 +43,7 @@ public class LoginConnection {
 			
 			e.printStackTrace();
 		}
-		return pd;
+		return null;
 	}
 	
 }

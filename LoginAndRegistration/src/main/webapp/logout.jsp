@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>logut page</title>
-<link rel="stylesheet" type="text/css" href="login.css">
+<link rel="stylesheet" type="text/css" href="CSS/logout.css">
 </head>
 <body>
 <div class="logout">

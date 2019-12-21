@@ -1,0 +1,77 @@
+#update{
+	text-decoration:none;
+	text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    cursor: pointer;
+}
+.input {
+	
+	text-align:left;
+    padding-left: 8px;
+    padding-right: 65px;
+
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 14px;
+
+}
+.click{
+	text-align: center;
+    padding-right: 422px;
+}
+button {
+	 font-family: "Times New Roman", Times, serif;
+	background: darkslateblue;
+	cursor: pointer;
+	font-weight: bold;
+    color: white;
+	
+}
+.edit{
+	font-weight: bold;
+	color: mediumvioletred;
+	    position: absolute;
+	 padding-right: 300px;
+	     padding-left: 390px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    text-align: left;
+}
+body{
+	text-align: center;
+	padding-top: 29px;
+}
+h1{
+	padding-bottom: 10px;
+	    padding-right: 132px;
+    color: darkslateblue;
+}
+.texting{
+    padding-left: 50px;
+}
+/* .editing{
+	    padding-left: 499px;
+} */
+
+
+
+
+
