@@ -29,11 +29,11 @@ public class UpdateServlet extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		PersonDetails pd = new PersonDetails();
-		PreparedStatement pstmt = null;
+		/*PreparedStatement pstmt = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("driver class loaded & registered");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc ? user=kavya & password=kavya123");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc ? user=kavya & password=kavya123");*/
 			pd.setfName(request.getParameter("firstName"));
 			pd.setlName(request.getParameter("lastName"));
 			pd.setEmailId(request.getParameter("email"));
@@ -48,11 +48,11 @@ public class UpdateServlet extends HttpServlet {
 				request.getRequestDispatcher("update.jsp").forward(request, response);
 			}
 			
-			
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
+		/*
+		 * } catch (Exception e) {
+		 * 
+		 * e.printStackTrace(); }
+		 */
 
 	}
 }

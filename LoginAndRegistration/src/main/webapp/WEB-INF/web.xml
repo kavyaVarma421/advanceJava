@@ -3,6 +3,26 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+<!-- 	<filter>
+		<filter-name>FilterDemo</filter-name>
+		<display-name>FilterDemo</display-name>
+		<description></description>
+		<filter-class>controller.FilterDemo</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterDemo</filter-name>
+		<url-pattern>/FilterDemo</url-pattern>
+	</filter-mapping> -->
+	<!-- <filter>
+		<filter-name>LoginFilter</filter-name>
+		<display-name>LoginFilter</display-name>
+		<description></description>
+		<filter-class>controller.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/LoginFilter</url-pattern>
+	</filter-mapping> -->
 <!-- 	<servlet>
 		<servlet-name>UpdatePageNav</servlet-name>
 		<display-name>UpdatePageNav</display-name>

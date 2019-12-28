@@ -15,34 +15,37 @@ import javax.servlet.http.HttpSession;
 import model.LoginDetails;
 import model.PersonDetails;
 import service.LoginConnection;
+
 /**
  * Servlet implementation class LoginServlet
  */
 @SuppressWarnings("serial")
 @WebServlet("/LoginServlet")
 public final class LoginServlet extends HttpServlet {
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      PrintWriter out = response.getWriter();
-		response.setContentType("text/javascript");
-    PrintWriter pw = response.getWriter();
-     String username = request.getParameter("username");
-     LoginDetails ld = new LoginDetails();
-    ld.setuName(username);
-    ld.setPassword(request.getParameter("passwrd"));
 
-    	PersonDetails result = LoginConnection.checkingDetails(ld);
-    	if(result!=null) {
-    	HttpSession session = request.getSession(true);
-    	session.setAttribute("name",username);
-    	request.setAttribute("detail", result);
-    	RequestDispatcher rs = request.getRequestDispatcher("userDetails.jsp");
-    	rs.forward(request, response);
-    		} 
-    	else {
-            out.print("inavlid username & password...");
-    	}
-          
-    		}
-     
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		System.out.println("11");
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/javascript");
+
+		String username = request.getParameter("username");
+		LoginDetails ld = new LoginDetails();
+		ld.setuName(username);
+		ld.setPassword(request.getParameter("passwrd"));
+
+		PersonDetails result = LoginConnection.checkingDetails(ld);
+		if (result != null) {
+			HttpSession session = request.getSession(true);
+			session.setAttribute("name", username);
+			request.setAttribute("detail", result);
+			RequestDispatcher rs = request.getRequestDispatcher("userDetails.jsp");
+			rs.forward(request, response);
+		} else {
+			out.print("inavlid username & password...");
+
+		}
 	}
 
+}

@@ -24,7 +24,7 @@ body {
 			<div class="login-form" align="center">
 			<div class="show" style="display: <%=s%>;">Successfully registered..now you can login here!</div>
 			<%-- <div class="displ" style="editing: <%=str%>;">successfully updated..login to show deatails</div> --%>
-				<input type="text" name="username" placeholder="UserName" class="input">
+				<input type="text" name="username" placeholder="UserName" class="input" required="required">
                 <input type="password" name= "passwrd" placeholder="Password" class="input">            
 				<div class="button">
 					<button type="submit" id="hh">login</button>

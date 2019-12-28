@@ -3,20 +3,7 @@
 <title>login and registration page</title>
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
-<!--  <style>
-.Signup {
-	width: 200%;
-	background-color:red;
-	color:white;
-	font-weight:bold;
-	height: 60px;
-	float: right;
-	line-height: 60px;
-	text-align: center;
-	cursor: pointer;
-	text-transform: uppercase;
-}
-</style>  -->
+
 <body>
 	<script src="login.js" type="text/javascript">
 
